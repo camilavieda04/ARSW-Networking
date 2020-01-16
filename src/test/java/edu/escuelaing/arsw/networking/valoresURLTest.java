@@ -1,6 +1,8 @@
 package edu.escuelaing.arsw.networking;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.junit.Test;
 
@@ -23,4 +25,16 @@ public class valoresURLTest {
 		
 	}
 	
+	@Test
+	public void deberiaDarInformacionURL()throws IOException{
+		
+		valoresURL x = new valoresURL();
+		x.leerDatosInternet();
+	}
+	
+	@Test
+	public void deberiaDarInformacionURLNueva() throws IOException{
+		valoresURL x = new valoresURL();
+		x.leerURLUser();
+	}
 }

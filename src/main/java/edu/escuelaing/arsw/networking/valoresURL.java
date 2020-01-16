@@ -1,60 +1,72 @@
 package edu.escuelaing.arsw.networking;
 import java.net.MalformedURLException;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.*;
 import java.net.URL;
 
 public class valoresURL {
 	
-	private URL youtube;
+	private URL google;
 	
 	public valoresURL() throws MalformedURLException {
 		
-		youtube = new URL("http://www.youtube.com/");
+		google = new URL("http://www.google.com/");
 		
 	}
 	public static void main(String[]args) throws Exception{
-			URL google = new URL("http://www.google.com/");
-		   BufferedReader reader = new BufferedReader(new InputStreamReader(google.openStream()));
-		     String inputLine = null;
-		    while ((inputLine = reader.readLine()) != null) {
-		    	System.out.println(inputLine);
-		     
-		    }
+			
 		 
 	}
 	
+	public void leerDatosInternet() throws IOException {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(google.openStream()));
+		String inputLine = null;
+		while ((inputLine = reader.readLine()) != null) {
+		    System.out.println(inputLine);
+		     
+		    }
+	}
+	
+	public void leerURLUser() throws IOException {
+		BufferedReader reader = new BufferedReader (new InputStreamReader(System.in));
+		String inputLine = null;
+		while ((inputLine = reader.readLine()) != null) {
+		    System.out.println(inputLine);
+		}
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+	}
 	public String getProtocol() {
-		return youtube.getProtocol();
+		return google.getProtocol();
 	}
 	
 	public String getAuthority() {
-		return youtube.getAuthority();
+		return google.getAuthority();
 	}
 	
 	public String getHost() {
-		return youtube.getHost();
+		return google.getHost();
 	}
 
 	public int getPort() {
-		return youtube.getPort();
+		return google.getPort();
 	}
 	
 	public String getQuery() {
-		return youtube.getQuery();
+		return google.getQuery();
 	}
 	
 	public String getPath() {
-		return youtube.getPath();
+		return google.getPath();
 	}
 	
 	public String getFile() {
-		return youtube.getFile();
+		return google.getFile();
 	}
 	
 	public String getRef() {
-		return youtube.getRef();
+		return google.getRef();
 	}
 	
 
