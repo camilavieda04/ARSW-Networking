@@ -3,6 +3,7 @@ import java.net.MalformedURLException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.*;
 import java.net.URL;
 
@@ -31,10 +32,13 @@ public class valoresURL {
 	
 	public void leerURLUser() throws IOException {
 		BufferedReader reader = new BufferedReader (new InputStreamReader(System.in));
+		PrintWriter writer = new PrintWriter("resultado.html");
 		String inputLine = null;
 		while ((inputLine = reader.readLine()) != null) {
-		    System.out.println(inputLine);
+		    writer.println(inputLine);
+		   
 		}
+		writer.close();
 		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 	}
 	public String getProtocol() {

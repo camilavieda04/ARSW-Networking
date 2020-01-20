@@ -1,6 +1,7 @@
 package edu.escuelaing.arsw.networking;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -32,9 +33,10 @@ public class valoresURLTest {
 		x.leerDatosInternet();
 	}
 	
-	@Test
+	/*@Test
 	public void deberiaDarInformacionURLNueva() throws IOException{
 		valoresURL x = new valoresURL();
+		//PrintWriter writer = new PrintWriter(resultado.html);
 		x.leerURLUser();
-	}
+	}*/
 }
